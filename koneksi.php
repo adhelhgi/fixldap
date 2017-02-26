@@ -15,5 +15,5 @@ $pass = "mysqlsecret";
 $name = "radius";
  
 $koneksi = mysql_connect($host, $user, $pass) ;
-
+mysql_select_db($name, $koneksi);
 ?>
