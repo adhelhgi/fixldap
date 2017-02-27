@@ -27,7 +27,7 @@
 		    // bind with appropriate dn to give update access
 		    $data = ldap_bind($ldap_con, $ldap_dn, $ldap_pass);
 		    $data = ldap_add($ldap_con, "cn=$user_name, $ldap_dn2", $info);
-		    $input = mysql_query ("INSERT INTO radcheck VALUES('$cn', '$UserName', '$Attribute', '$op', '$Value')");
+		    $input = mysql_query ("INSERT INTO radcheck VALUES(NULL, '$UserName', '$Attribute', '$op', '$Value')");
 		    
 		    echo "<script>alert('BERHASIL ....');</script>";
 		    echo "<meta http-equiv='refresh' content='0; url=index.php'>";
